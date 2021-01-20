@@ -25,7 +25,7 @@ html{
 #header nav ul li{
       display: inline-block;
       padding:10px 24px;
-      position: relative;
+     
 }
 #header nav ul li a{
     text-decoration:none;
@@ -34,6 +34,8 @@ html{
     display: block;
     padding:10px 24px;
     transition: all 0.5s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
 }
 
 #header nav div.image img{
@@ -43,37 +45,15 @@ html{
 }
 
 #header nav ul li a:hover{
-    background-color: #ff4500;
-    color: #fff;
+    color: #ccc;
 }
 
-#header nav ul li div.dropdown{
-    position: absolute;
-    top:100%;
-    margin-top:0.1rem;
-    visibility: hidden;
-    opacity: 0.5;
-    z-index: 1;
-    background-color: #ccc;
-}
 
-#header nav ul li div.dropdown a{
-    transition:none;
-}
-
-#header nav ul li div.dropdown a:hover{
-    background-color:#008000;
-}
-
-#header nav ul li:hover div.dropdown{
-    visibility: visible;
-    opacity: 1;
-}
 
 
 /*---media query---*/
 
-@media only screen and (max-width:700px){
+@media only screen and (max-width:830px){
      
 
     
@@ -84,23 +64,25 @@ html{
     align-items: center;
     border-bottom:none;
     position: relative;
+    
   }
 
   #header nav div.image img{
-    display: block;
+
+    display:block;
     margin-left: auto;
     margin-right: auto;
     padding-bottom:0.5rem;
-    position: relative;
+    
 }
 
   
 #header nav ul{
-    position:absolute;
+    position: absolute;
     top:100%;
     width:100%;
     margin: 0;
-    background-color: #ccc;
+    background-color: rgb(155, 63, 63);
     transform:none;
     z-index:1;
  }
@@ -111,46 +93,37 @@ html{
 }
 
 #header nav ul li a{
-    color: rgb(61, 56, 56) !important;
-}
+    color: rgb(5, 3, 3);
 
-#header nav ul li div.dropdown{
-    display:none;
 }
 
 div.content{
+    position: relative;
+    margin-top:19rem;
     display:flex;
     align-items:center;
     justify-content:center;
-   
+   background-color:#ccc;
+   z-index: 1;
 }
 
 div.content img{
      width: 100%;
-     position: absolute;
-     top:50%;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     
 }
 
-div.content h1{
-    position: absolute;
-    top:50%;
-    text-transform:uppercase;
-    color: #a04747;
-    font-weight:600;
-    font-size:2rem;
-    background-color:#cccf0b;
-    transition:all 0.5s ease;
-}
 
 #tech-lang{
-    background-color: rgb(26, 94, 196);
-    position: absolute;
-    top: 100%;
-    margin-top:10rem;
+    background-color:rgb(29, 27, 27);
+   margin-top:2rem;
     width: 100%;
     display:grid;
     justify-content:center;
     align-items:center;
+    
 }
 
 #tech-lang h1{
@@ -170,16 +143,15 @@ div#tech-content div.C-lang,div.CPP,div.Python,
 div.JavaScript,div.Html,div.Css
 {
     margin-top:2em;
-    width: 100%;
-    background-color: rgba(14, 12, 12, 0.972);
+    width:100%;
+    background-color:rgb(15, 12, 10);
     border-radius:5px;
-    box-shadow: 2px 2px 2px #ccc, 
-                -2px -2px 3px #fff,
-                3px 4px 5px rgb(170, 122, 31);
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, 
+       rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 
 div#tech-content article{
-    padding-top:1em;;
+    padding-top:1em;
 }
 
 div#tech-content img{
@@ -219,7 +191,168 @@ div#tech-content article button a{
        letter-spacing:0.3em;
        font-size:1.2em;
        color:rgb(39, 25, 25);
+  }
+
 }
 
 
+
+@media only screen and (min-width:830px) and (max-width:990px)
+{
+         
+    #header nav{
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        border-bottom:none;
+   }
+
+
+   #header nav div.image img{
+       height:90%;
+       width:100%;
+       padding:0.3em 0 0.1rem 2rem;
+   }
+
+  
+#header nav ul{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    margin: 0 auto;
+    transform:none;
+    overflow:hidden;
+ }
+
+ #header nav ul li{
+    padding:0 0.9em 0 0;
+    text-align:center;
+    margin: 0;
 }
+
+#header nav ul li a{
+    display:block;
+    color: rgb(5, 3, 3);
+    transition: all 0.4s ease;
+}
+
+#header nav ul li a:hover{
+    background-color:#292929;
+    color: #fff;
+}
+
+
+div.content{
+    margin-top:3rem;
+   background-color:#ccc;
+  
+}
+
+div.content img{
+     width: 100%;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+ 
+}
+
+
+#tech-lang{
+    background-color:#fff;
+    margin-top:2rem;
+    width: 100%;
+    display:grid;
+    justify-content:center;
+    align-items:center; 
+}
+
+#tech-lang h1{
+    text-align:center;
+    padding-top:2rem;
+    font-size:1.8em;
+    text-transform:uppercase;
+    line-height: 1.5;
+    color: #db0d0d;
+}
+
+#tech-lang div#tech-content{
+    margin-top:2rem;
+    display:grid;
+    grid-template-rows:repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
+    justify-content:center;
+    align-items:center;
+    grid-gap:2rem;
+ }
+
+
+ div#tech-content div.C-lang,div.CPP,div.Python,
+div.JavaScript,div.Html,div.Css
+{
+    margin-top:2em;
+    width:25rem;
+    background-color:rgb(66, 62, 62);
+    border-radius:5px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, 
+       rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+div#tech-content article{
+    padding-top:1em;
+}
+
+div#tech-content img{
+    height: 5em;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    background:#5f5553;
+    border-radius:50%;
+}
+
+div#tech-content p{
+    color: rgba(252, 247, 247, 0.671);
+    line-height:1.5;
+    font-size:1em;
+    text-align:left;
+    text-transform:capitalize;
+    overflow: hidden;
+    padding: 1em;
+    display: block;
+    padding-left:2em;
+}
+
+div#tech-content button.btn{
+    background-color:#ff4500;
+    border:none;
+    border-radius:2px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 1rem;
+}
+
+div#tech-content article button a{
+    text-decoration: none;
+    padding: 10px 24px;
+    display: block;
+    text-transform:uppercase;
+    letter-spacing:0.3em;
+    font-size:1.2em;
+    color:rgb(39, 25, 25);
+}
+
+} 
+
+
+
+@media only screen and (min-width:990px)
+{
+         
+   
+
+    
+} 
+
